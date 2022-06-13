@@ -1,10 +1,12 @@
 # FakeTag
 firmware for nRF51 chips that is coincidentally compatible with the FindMy (AirTag) ecosystem.
 
+You can read about this project [here](https://hackaday.com/2022/05/30/check-your-mailbox-using-the-airtag-infrastructure/).
+
 It sends out advertisement keys defined in [keys.h](keys.h), rotating keys every hour.
 
 Also, an input pin can be defined. Whenever that input pin is triggered, the status byte increments by one.
-The first two bits of the status byte contain battery information, the other six bytes contain the counter in my code.
+The first two bits of the status byte contain battery information, the other six bits contain the counter in my code.
 
 I use this for my Mailbox-sensor.
 There is a vibraion sensor attached to the board, and whener the Mailbox is opened the vibration sensor triggers, which 
