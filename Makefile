@@ -13,7 +13,7 @@ SHELL := /bin/bash
 
 SDK_ROOT := $(BLE_ROOT)/nRF5_SDK_12.3.0_d7731ad
 PROJ_DIR := .
-CUSTOM_INCLUDES_DIR = $(BLE_ROOT)/includes
+CUSTOM_INCLUDES_DIR = $(PROJ_DIR)
 ADB_TARGET := pixel
 ADB_DIRECTORY := /sdcard/dfu
 
@@ -70,7 +70,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/ble/ble_services/ble_dfu/ble_dfu.c \
   $(SDK_ROOT)/components/libraries/fds/fds.c \
   $(CUSTOM_INCLUDES_DIR)/battery_service/battery.c \
-	$(CUSTOM_INCLUDES_DIR)/boards/boards.c \
+  $(CUSTOM_INCLUDES_DIR)/boards/boards.c \
 
 # Include folders common to all targets
 INC_FOLDERS += \
@@ -181,7 +181,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/ble/ble_services/ble_dfu \
   $(PROJ_DIR) \
   $(CUSTOM_INCLUDES_DIR)/battery_service \
-	$(CUSTOM_INCLUDES_DIR)/boards \
+  $(CUSTOM_INCLUDES_DIR)/boards \
 
 # Libraries common to all targets
 LIB_FILES += \
